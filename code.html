@@ -1,181 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Project Charter - Advertising Business</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Charter Bisnis Periklanan</title>
+  <style>
+    body {
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+      background: #141E30;  /* dark blue gradient background */
+      background: linear-gradient(135deg, #141E30, #243B55);
+      color: #F0F0F0;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
+    .wrapper {
+      background: rgba(255 255 255 / 0.07);
+      max-width: 860px;
+      width: 100%;
+      border-radius: 15px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.65);
+      backdrop-filter: saturate(180%) blur(14px);
+    }
 
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            max-width: 900px;
-            width: 100%;
-            border-radius: 15px;
-            padding: 3rem 3rem 2rem 3rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
+    h1 {
+      font-weight: 600;
+      font-size: 2.75rem;
+      text-align: center;
+      margin-bottom: 0.25rem;
+      letter-spacing: 3px;
+      color: #FF6F61;
+      text-transform: uppercase;
+    }
 
-        h1 {
-            font-weight: 600;
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    h2 {
+      font-weight: 600;
+      font-size: 1.7rem;
+      margin-top: 2.8rem;
+      margin-bottom: 1rem;
+      border-left: 6px solid #FF6F61;
+      padding-left: 0.8rem;
+      color: #FF6F61;
+    }
 
-        h2 {
-            margin-top: 2rem;
-            font-weight: 600;
-            font-size: 1.6rem;
-            border-bottom: 2px solid #ffbf47;
-            padding-bottom: 0.3rem;
-            margin-bottom: 1rem;
-            color: #ffbf47;
-        }
+    p, li {
+      font-weight: 300;
+      font-size: 1rem;
+    }
 
-        p, li {
-            line-height: 1.6;
-            font-weight: 300;
-            font-size: 1rem;
-            color: #eee;
-        }
+    ul {
+      padding-left: 1.2rem;
+      list-style-type: square;
+    }
 
-        ul {
-            padding-left: 1.3rem;
-        }
+    li {
+      margin-bottom: 6px;
+    }
 
-        .highlight {
-            color: #ffbf47;
-            font-weight: 600;
-        }
+    strong {
+      color: #fff;
+    }
 
-        footer {
-            margin-top: 2.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #bbbbbb;
-        }
+    .btn-contact {
+      display: inline-block;
+      background: #FF6F61;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.7rem 2.3rem;
+      border-radius: 24px;
+      text-decoration: none;
+      margin-top: 1.4rem;
+      box-shadow: 0 5px 15px rgb(255 111 97 / 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .btn-contact:hover {
+      background: #e65b50;
+      transform: scale(1.05);
+      box-shadow: 0 9px 28px rgb(230 91 80 / 0.75);
+    }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .container {
-                padding: 2rem 1.5rem;
-            }
+    footer {
+      font-size: 0.9rem;
+      text-align: center;
+      color: #aaa;
+      margin-top: 3rem;
+      user-select: none;
+    }
 
-            h1 {
-                font-size: 2rem;
-            }
+    @media (max-width: 600px) {
+      .wrapper {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.35rem;
+        margin-top: 2rem;
+      }
+    }
 
-            h2 {
-                font-size: 1.3rem;
-                margin-top: 1.2rem;
-            }
-        }
-
-        /* Button styling */
-        .contact-button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.7rem 2rem;
-            background: #ffbf47;
-            color: #222;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 5px 15px rgba(255, 191, 71, 0.5);
-        }
-
-        .contact-button:hover {
-            background: #ffaa00;
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255,170,0,0.75);
-        }
-
-    </style>
+  </style>
 </head>
 <body>
-    <div class="container" role="main">
-        <h1>Project Charter</h1>
-        <h2>Business Advertising / Periklanan</h2>
+  <main class="wrapper" role="main" aria-label="Landing page Project Charter Bisnis Periklanan">
+    <h1>PROJECT CHARTER</h1>
+    <h2>Bisnis Periklanan Kreatif</h2>
 
-        <section aria-label="Project Overview">
-            <h2>Project Overview</h2>
-            <p>
-                This project charter outlines the inception and strategic framework for our
-                <span class="highlight">Advertising Business</span>. Our goal is to deliver innovative advertising solutions to
-                enhance brand presence and maximize client engagement in the digital and traditional media landscape.
-            </p>
-        </section>
+    <section aria-label="Gambaran Proyek">
+      <h2>Gambaran Proyek</h2>
+      <p>
+        Proyek ini bertujuan membangun fondasi yang kuat untuk pengembangan bisnis periklanan
+        <strong>kreatif dan terintegrasi</strong> dengan memanfaatkan platform digital dan media konvensional
+        untuk meningkatkan visibilitas dan pertumbuhan klien kami secara signifikan.
+      </p>
+    </section>
 
-        <section aria-label="Objectives">
-            <h2>Objectives</h2>
-            <ul>
-                <li>Develop a comprehensive multi-channel advertising campaign platform.</li>
-                <li>Increase client brand awareness by at least 40% within one year.</li>
-                <li>Achieve measurable growth in target audience reach and engagement.</li>
-                <li>Establish partnerships with top media and influencer networks.</li>
-            </ul>
-        </section>
+    <section aria-label="Tujuan Proyek">
+      <h2>Tujuan Proyek</h2>
+      <ul>
+        <li>Membangun kampanye iklan multi-channel inovatif dan efektif.</li>
+        <li>Meningkatkan kesadaran merek klien sebesar 50% dalam 12 bulan.</li>
+        <li>Memperluas jaringan mitra media dan influencer strategis.</li>
+        <li>Melaksanakan analisa kampanye berbasis data untuk peningkatan ROI.</li>
+      </ul>
+    </section>
 
-        <section aria-label="Scope">
-            <h2>Scope</h2>
-            <p>
-                The project covers planning, design, and implementation of advertising campaigns across social media, TV,
-                print, and digital platforms. It includes market research, creative development, media buying, and
-                campaign analytics.
-            </p>
-        </section>
+    <section aria-label="Lingkup Proyek">
+      <h2>Lingkup Proyek</h2>
+      <p>
+        Meliputi riset pasar, perencanaan kreatif, pengadaan media, eksekusi kampanye, hingga evaluasi
+        performa melalui berbagai saluran termasuk online dan offline.
+      </p>
+    </section>
 
-        <section aria-label="Key Stakeholders">
-            <h2>Key Stakeholders</h2>
-            <ul>
-                <li>Project Sponsor: CEO, PT Kreatif Media</li>
-                <li>Marketing Manager</li>
-                <li>Creative Team</li>
-                <li>Sales and Media Buying Team</li>
-                <li>External Advertising Partners</li>
-            </ul>
-        </section>
+    <section aria-label="Pemangku Kepentingan">
+      <h2>Pemangku Kepentingan</h2>
+      <ul>
+        <li>Direktur Utama (Sponsor Proyek)</li>
+        <li>Manajer Pemasaran</li>
+        <li>Tim Kreatif</li>
+        <li>Tim Media dan Penjualan</li>
+        <li>Mitra Eksternal</li>
+      </ul>
+    </section>
 
-        <section aria-label="Timeline">
-            <h2>Timeline</h2>
-            <ul>
-                <li>Planning & Research: March 2024</li>
-                <li>Creative Development: April - May 2024</li>
-                <li>Implementation & Media Buying: June - August 2024</li>
-                <li>Monitoring & Evaluation: September - October 2024</li>
-            </ul>
-        </section>
+    <section aria-label="Jadwal Proyek">
+      <h2>Jadwal Proyek</h2>
+      <ul>
+        <li>Maret 2024 — Analisis pasar dan perencanaan</li>
+        <li>April-Mei 2024 — Pengembangan konsep kreatif</li>
+        <li>Juni-Agustus 2024 — Pelaksanaan kampanye dan pembelian media</li>
+        <li>September-Oktober 2024 — Monitoring dan evaluasi hasil</li>
+      </ul>
+    </section>
 
-        <section aria-label="Contact Information">
-            <h2>Contact</h2>
-            <p>For more information or partnership inquiries, please contact us:</p>
-            <a href="mailto:info@kreatifmedia.com" class="contact-button" role="button">Email Us</a>
-        </section>
+    <section aria-label="Kontak Project">
+      <h2>Kontak</h2>
+      <p>
+        Pertanyaan atau kerja sama? Hubungi kami melalui email di bawah ini:
+      </p>
+      <a href="mailto:contact@advertisingbiz.co.id" class="btn-contact" role="button" aria-label="Email Kontak Advertiser">
+        Hubungi Kami
+      </a>
+    </section>
 
-        <footer>
-            &copy; 2024 PT Kreatif Media | All rights reserved.
-        </footer>
-    </div>
+    <footer>
+      &copy; 2024 Advertising Biz. Semua Hak Cipta Dilindungi.
+    </footer>
+  </main>
 </body>
 </html>
-
